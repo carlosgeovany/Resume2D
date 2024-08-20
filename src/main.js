@@ -6,16 +6,23 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
   sliceX: 39,
   sliceY: 31,
   anims: {
-    "idle-down": 936,
-    "walk-down": { from: 936, to: 939, loop: true, speed: 8 },
-    "idle-side": 975,
-    "walk-side": { from: 975, to: 978, loop: true, speed: 8 },
-    "idle-up": 1014,
-    "walk-up": { from: 1014, to: 1017, loop: true, speed: 8 },
+    "idle-down": 944,
+    "walk-down": { from: 944, to: 947, loop: true, speed: 8 },
+    "idle-side": 983,
+    "walk-side": { from: 983, to: 986, loop: true, speed: 8 },
+    "idle-up": 1022,
+    "walk-up": { from: 1022, to: 1025, loop: true, speed: 8 },
   },
 });
 
 k.loadSprite("map", "./map.png");
+
+// Load the background music file
+k.loadSound("bgMusic", "./adventure.mp3");
+k.loadSound("dogBark", "./dog_bark.mp3");
+
+// Play the background music when the scene starts
+k.play("bgMusic", { loop: true });
 
 k.setBackground(k.Color.fromHex("#311047"));
 
@@ -57,6 +64,9 @@ k.scene("main", async () => {
         if (boundary.name) {
           player.onCollide(boundary.name, () => {
             player.isInDialogue = true;
+            if (boundary.name === "lisa"){
+              k.play("dogBark", { loop: false });
+            }
             displayDialogue(
               dialogueData[boundary.name],
               () => (player.isInDialogue = false)
