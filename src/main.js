@@ -19,6 +19,7 @@ k.loadSprite("map", "./map.png");
 
 // Load the background music file
 k.loadSound("bgMusic", "./adventure.mp3");
+
 k.loadSound("dogBark", "./dog_bark.mp3");
 
 // Play the background music when the scene starts

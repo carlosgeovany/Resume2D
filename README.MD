@@ -3,7 +3,7 @@
 Inspired by the many creative 3D developer portfolios, I create one that's 2D instead.
 
 
-Live Demo : https://jslegenddev.github.io/portfolio/
+Live Demo : https://carlosgeovany.github.io/resume/
 
 
 I used a modified version of this original tileset (Giving credit where it's due) : https://momen-games.itch.io/happy-la-v2-ts
