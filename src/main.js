@@ -17,28 +17,9 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
 
 k.loadSprite("map", "./map.png");
 
-k.loadSound("bgMusic", "./adventure.mp3");
-
 k.loadSound("dogBark", "./dog_bark.mp3");
 
 k.setBackground(k.Color.fromHex("#311047"));
-
-
-// Play the background music when the scene starts
-k.play("bgMusic", { loop: true });
-
-
-// // Function to start the music
-// function playBackgroundMusic() {
-//   k.play("bgMusic", { loop: true });
-//   // Remove the event listeners after the music starts
-//   window.removeEventListener('click', playBackgroundMusic);
-//   window.removeEventListener('keydown', playBackgroundMusic);
-// }
-
-// // Add event listeners for the first user interaction
-// window.addEventListener('click', playBackgroundMusic);
-// window.addEventListener('keydown', playBackgroundMusic);
 
 
 k.scene("main", async () => {
